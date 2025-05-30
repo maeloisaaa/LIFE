@@ -8,32 +8,59 @@
 </head>
 <body>
   <header>
-    <h1>LIFE</h1>
-    <p>Crie memórias, celebre momentos</p>
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Logo LIFE">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#criar">Criar Presente</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <section>
-      <h2>📸 Envie uma foto</h2>
-      <input type="file" accept="image/*">
+    <section id="criar">
+      <h2>🎁 Crie um Presente Virtual</h2>
+      <form id="form-presente">
+        <label for="foto">📸 Envie uma foto</label>
+        <input type="file" id="foto" name="foto" accept="image/*" required>
+
+        <label for="musica">🎵 Escolha uma música</label>
+        <input type="file" id="musica" name="musica" accept="audio/*" required>
+
+        <label for="emocao">💌 Compartilhe uma emoção</label>
+        <textarea id="emocao" name="emocao" placeholder="Escreva algo especial..." required></textarea>
+
+        <label for="data">📅 Marque uma data especial</label>
+        <input type="date" id="data" name="data" required>
+
+        <button type="submit">Criar Presente</button>
+      </form>
     </section>
 
-    <section>
-      <h2>🎵 Escolha uma música</h2>
-      <input type="file" accept="audio/*">
+    <section id="sobre">
+      <h2>Sobre o LIFE</h2>
+      <p>O LIFE é uma plataforma que permite criar presentes virtuais personalizados, combinando fotos, músicas, mensagens e datas especiais. Perfeito para surpreender amigos, familiares ou aquela pessoa especial.</p>
     </section>
 
-    <section>
-      <h2>💌 Compartilhe uma emoção</h2>
-      <textarea placeholder="Escreva algo especial..."></textarea>
-    </section>
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Tem alguma dúvida ou sugestão? Entre em contato conosco!</p>
+      <form>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required>
 
-    <section>
-      <h2>📅 Marque uma data especial</h2>
-      <input type="date">
-    </section>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
 
-    <button onclick="criarPresente()">🎁 Criar Presente</button>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
   </main>
 
   <footer>
